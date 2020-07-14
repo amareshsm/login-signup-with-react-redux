@@ -3,6 +3,8 @@ import { Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 const PrivateRoute = ({ component: Component, auth, ...rest }) => (
+ 
+ //checking whether the user is authenticated or not if not then redirect to login
   <Route
     {...rest}
     render={props =>
